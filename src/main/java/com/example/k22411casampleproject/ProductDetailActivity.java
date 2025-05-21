@@ -46,11 +46,11 @@ public class ProductDetailActivity extends AppCompatActivity {
     private void display_product_details() {
         Intent intent=getIntent();
         Product c=(Product) intent.getSerializableExtra("SELECTED_PRODUCT");
-        edt_product_id.setText(c.getId()+"");
+        edt_product_id.setText(String.valueOf(c.getId()));
         edt_product_name.setText(c.getName());
-        edt_product_quantity.setText(c.getQuantity());
-        edt_product_price.setText(c.getPrice());
-        edt_product_cateid.setText(c.getCateid());
-        edt_product_imageid.setText(c.getImage_id());
+        edt_product_quantity.setText(String.valueOf(c.getQuantity()));
+        edt_product_price.setText(String.valueOf(c.getPrice()));
+        edt_product_cateid.setText(String.valueOf(c.getCateid()));
+        edt_product_imageid.setText(String.valueOf(c.getImage_id()));
     }
 }
